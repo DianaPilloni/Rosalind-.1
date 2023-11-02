@@ -11,12 +11,12 @@ for el in new:
         DNA=DNA.replace(el,'')
 
 def toprot(DNA):
-    #from biology I first year
+    
     RNA=DNA.replace('T','U')
-    #we need to split the dna in codons
+    
     RNA=re.split(r'([AUGC]{3})',RNA)
 
-    #now thanks to our codon dictionary we can translate each codon into an amino acid
+    
     aminosequence=[]
     for elements in RNA:
         if elements != '':
