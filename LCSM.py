@@ -17,10 +17,10 @@ def r_seq(file):
 def LCSM(sequence):
     seq = r_seq(sequence)
     smallest_seq = min(seq, key=len)
-    for i in range(len(smallest_seq), 0, -1):  # Fix the loop range for 'i'
-        for j in range(len(smallest_seq) - i + 1):  # Fix the loop range for 'j'
+    for i in range(len(smallest_seq), 0, -1):  
+        for j in range(len(smallest_seq) - i + 1):  
             common_seq = smallest_seq[j:j + i]
-            if all(common_seq in s for s in seq):  # Change 's' to 'seq' for consistency
+            if all(common_seq in s for s in seq):  
                 return common_seq
 
 
